@@ -12,12 +12,21 @@
     "react-native": "0.57.3"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
+    "eslint": "^5.7.0",
+    "eslint-config-universe": "^1.0.7",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.5.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.48.1",
+    "prettier": "^1.14.3",
     "react-test-renderer": "16.6.0-alpha.8af6728"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "eslintConfig": {
+    "extends": "universe/native"
   }
 }
