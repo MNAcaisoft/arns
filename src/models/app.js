@@ -1,4 +1,5 @@
 import Config from '../services/Config';
+import SplashScreen from 'react-native-splash-screen';
 
 const app = {
   effects: dispatch => ({
@@ -9,6 +10,7 @@ const app = {
       } else {
         dispatch.navigation.setRoot(`${Config.urlPrefix}.Login`);
       }
+      SplashScreen.hide();
     },
   }),
   reducers: {},
