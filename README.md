@@ -12,3 +12,29 @@ To change screens prefix go to services/Config.
 ## Forms
 Take a look at this docs
 https://github.com/gcanti/tcomb-form-native#example
+
+## Reusable project
+Take a look how to change project name.
+https://www.npmjs.com/package/react-native-rename
+
+## Stuff Linked
+1.  React Native
+2.  React Native Navigator
+3.  Redux
+4.  Rematch/Loading
+5.  Native Splash Screen
+6.  Native Base
+7.  Jest
+8.  tcomb form native
+9.  EsLint
+10. Axios/http service
+11. AsyncStorage
+12. User handling with API login
+
+## Stuff needed
+1. Multiple routings(sidebar)
+2. Top Bar component
+3. Logout
+4. Sidebar
+5. Toast notifications
+6. Login Screen layout
