@@ -5,9 +5,10 @@ import { Text, View } from 'react-native';
 
 class Login extends React.Component<Props, State> {
   render() {
+    console.log('login', this.props);
     return (
       <View>
-        <Text>Login</Text>
+        <Text>Login 1</Text>
       </View>
     );
   }
