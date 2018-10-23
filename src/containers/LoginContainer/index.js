@@ -1,46 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text,
-} from 'native-base';
 import Login from './../../screens/Login';
 
+import Config from '../../services/Config';
+
 class LoginContainer extends React.Component<Props, State> {
-  static navigatorStyle = {
-    navBarHidden: true,
-  };
   // constructor(props, state) {
   //   super(props, state);
   //   console.log(this);
   // }
 
+  handleLogin = () => {
+    const { navigator } = this.props;
+    navigator.push({ screen: `${Config.urlPrefix}.Home` });
+  };
+
   render() {
     const { props } = this;
-    return (
-      <Container>
-        <Content>
-          <Login {...props} />
-        </Content>
-      </Container>
-    );
+    return <Login onLogin={this.handleLogin} {...props} />;
   }
 }
 
 const mapStateToProps = state => ({});
 
+const mapDispatchToProps = dispatch => ({});
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(LoginContainer);

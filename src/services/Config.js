@@ -1,5 +1,6 @@
 export class Config {
   constructor() {
+    this.urlPrefix = 'arns';
     this.apiUrl = '';
   }
 }

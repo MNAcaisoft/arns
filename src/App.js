@@ -13,7 +13,7 @@ export default class App extends Component<Props> {
   }
 
   onStoreUpdate() {
-    const { root } = store.getState().app;
+    const { root } = store.getState().navigation;
     if (root && this.rootScreen !== root) {
       this.rootScreen = root;
       this.switchRoot(root, 'Login');

@@ -1,23 +1,13 @@
+import Config from '../services/Config';
+
 const app = {
   effects: dispatch => ({
     async init() {
-      dispatch.app.setRoot('arns.Login');
-    },
-    changeRoot(root) {
-      this.setRoot(root);
+      dispatch.navigation.setRoot(`${Config.urlPrefix}.Login`);
     },
   }),
-  reducers: {
-    setRoot(state, payload) {
-      return {
-        ...state,
-        root: payload,
-      };
-    },
-  },
-  state: {
-    root: null,
-  },
+  reducers: {},
+  state: {},
 };
 
 export default app;

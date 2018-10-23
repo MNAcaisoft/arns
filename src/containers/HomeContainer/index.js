@@ -18,9 +18,6 @@ import {
 import Home from './../../screens/Home';
 
 class HomeContainer extends React.Component<Props, State> {
-  static navigatorStyle = {
-    navBarHidden: true,
-  };
   // constructor(props, state) {
   //   super(props, state);
   //   console.log(this);
