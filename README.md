@@ -8,3 +8,7 @@ To override default native base theme variables - edit native-base-theme/variabl
 
 ## Screens Prefix
 To change screens prefix go to services/Config. 
+
+## Forms
+Take a look at this docs
+https://github.com/gcanti/tcomb-form-native#example

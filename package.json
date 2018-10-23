@@ -15,7 +15,8 @@
     "react-native": "0.57.3",
     "react-native-navigation": "^1.1.491",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "tcomb-form-native": "^0.6.20"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

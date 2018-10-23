@@ -1,7 +1,7 @@
 export class Config {
   constructor() {
     this.urlPrefix = 'arns';
-    this.apiUrl = '';
+    this.apiUrl = 'http://www.books.ibf.space/api';
   }
 }
 

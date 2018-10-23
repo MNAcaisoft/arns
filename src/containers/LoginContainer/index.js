@@ -3,28 +3,75 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Login from './../../screens/Login';
 
-import Config from '../../services/Config';
+const t = require('tcomb-form-native');
+
+const Form = t.form.Form;
+
+const LoginForm = t.struct({
+  email: t.String,
+  password: t.String,
+});
+
+const options = {
+  fields: {
+    password: {
+      placeholder: 'Provide password',
+      secureTextEntry: true,
+    },
+    email: {
+      placeholder: 'Provide email',
+    },
+  },
+};
 
 class LoginContainer extends React.Component<Props, State> {
-  // constructor(props, state) {
-  //   super(props, state);
-  //   console.log(this);
-  // }
+  static propTypes = {
+    isLoading: PropTypes.bool,
+  };
+  static contextTypes = {
+    store: PropTypes.object,
+  };
 
-  handleLogin = () => {
-    const { navigator } = this.props;
-    navigator.push({ screen: `${Config.urlPrefix}.Home` });
+  constructor(props, state) {
+    super(props, state);
+    this.state = {
+      email: null,
+      password: null,
+    };
+  }
+
+  handleLogin = async () => {
+    const { login } = this.props;
+    const formValue = this.form.getValue();
+    if (formValue) {
+      try {
+        await login(formValue);
+      } catch (err) {
+        if (err.status === 400) {
+          console.log('wrong credentials');
+        }
+      }
+      this.setState({ values: formValue });
+    }
   };
 
   render() {
-    const { props } = this;
-    return <Login onLogin={this.handleLogin} {...props} />;
+    const { isLoading } = this.props;
+    const { values } = this.state;
+    const form = (
+      <Form ref={ref => (this.form = ref)} type={LoginForm} options={options} value={values} />
+    );
+    return <Login loginForm={form} onLogin={this.handleLogin} loading={isLoading} />;
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  isLoading: state.loading.effects.auth.login,
+});
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  login: dispatch.auth.login,
+});
 
 export default connect(
   mapStateToProps,

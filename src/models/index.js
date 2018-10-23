@@ -3,12 +3,14 @@ import createLoadingPlugin from '@rematch/loading';
 
 import app from './app';
 import navigation from './navigation';
+import auth from './auth';
 
 const loading = createLoadingPlugin();
 
 const store = init({
   models: {
     app,
+    auth,
     navigation,
   },
   plugins: [loading],
