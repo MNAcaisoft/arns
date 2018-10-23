@@ -3,6 +3,7 @@ import { Navigation } from 'react-native-navigation';
 import { Component } from 'react';
 import { registerScreens } from './services/Screens';
 import store from './models';
+import SplashScreen from 'react-native-splash-screen';
 
 registerScreens(store, Provider);
 
