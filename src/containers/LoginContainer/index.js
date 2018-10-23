@@ -44,6 +44,7 @@ class LoginContainer extends React.Component<Props, State> {
     const { login } = this.props;
     const formValue = this.form.getValue();
     if (formValue) {
+      this.setState({ values: formValue });
       try {
         await login(formValue);
       } catch (err) {
@@ -51,12 +52,12 @@ class LoginContainer extends React.Component<Props, State> {
           console.log('wrong credentials');
         }
       }
-      this.setState({ values: formValue });
     }
   };
 
   render() {
-    const { isLoading } = this.props;
+    const { isLoading, token } = this.props;
+    console.log(token);
     const { values } = this.state;
     const form = (
       <Form ref={ref => (this.form = ref)} type={LoginForm} options={options} value={values} />
@@ -67,6 +68,7 @@ class LoginContainer extends React.Component<Props, State> {
 
 const mapStateToProps = state => ({
   isLoading: state.loading.effects.auth.login,
+  token: state.auth.token,
 });
 
 const mapDispatchToProps = dispatch => ({
