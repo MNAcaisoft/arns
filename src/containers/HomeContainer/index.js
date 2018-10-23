@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {
@@ -15,9 +15,9 @@ import {
   Icon,
   Text,
 } from 'native-base';
-import Login from './../../screens/Login';
+import Home from './../../screens/Home';
 
-class LoginContainer extends React.Component<Props, State> {
+class HomeContainer extends React.Component<Props, State> {
   static navigatorStyle = {
     navBarHidden: true,
   };
@@ -30,9 +30,27 @@ class LoginContainer extends React.Component<Props, State> {
     const { props } = this;
     return (
       <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name="menu" />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+        </Header>
         <Content>
-          <Login {...props} />
+          <Home {...props} />
         </Content>
+        <Footer>
+          <FooterTab>
+            <Button full>
+              <Text>Footer</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
@@ -43,4 +61,4 @@ const mapStateToProps = state => ({});
 export default connect(
   mapStateToProps,
   null
-)(LoginContainer);
+)(HomeContainer);
