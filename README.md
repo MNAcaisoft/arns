@@ -24,17 +24,17 @@ https://www.npmjs.com/package/react-native-rename
 4.  Rematch/Loading
 5.  Native Splash Screen
 6.  Native Base
-7.  Jest
-8.  tcomb form native
-9.  EsLint
-10. Axios/http service
-11. AsyncStorage
-12. User handling with API login
-13. Multiple routings(sidebar)
-14. Sidebar
-15. Logout
-16. Login Screen layout
+7.  tcomb form native
+8.  EsLint
+9. Axios/http service
+10. AsyncStorage
+11. User handling with API login
+12. Multiple routings(sidebar)
+13. Sidebar
+14. Logout
+15. Login Screen layout
 
 ## Stuff needed
 1. Top Bar component
 2. Toast notifications
+3. Jest
