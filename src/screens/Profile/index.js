@@ -17,17 +17,16 @@ import PropTypes from 'prop-types';
 
 // import styles from './styles';
 
-class Home extends React.Component<Props, State> {
+class Profile extends React.Component<Props, State> {
   static propTypes = {
     navigator: PropTypes.object,
   };
 
-  toggleMenu = () => {
+  goBack = () => {
     const { navigator } = this.props;
-    navigator.toggleDrawer({
-      backButtonHidden: true,
-      side: 'left',
+    navigator.popToRoot({
       animated: true,
+      animationType: 'fade',
     });
   };
 
@@ -36,18 +35,18 @@ class Home extends React.Component<Props, State> {
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={this.toggleMenu}>
-              <Icon name="menu" />
+            <Button transparent onPress={this.goBack}>
+              <Icon name="arrow-back" />
             </Button>
           </Left>
           <Body>
-            <Title>Home</Title>
+            <Title>Profile</Title>
           </Body>
           <Right />
         </Header>
         <Content>
           <View>
-            <Text>Home</Text>
+            <Text>Profile</Text>
           </View>
         </Content>
         <Footer>
@@ -62,4 +61,4 @@ class Home extends React.Component<Props, State> {
   }
 }
 
-export default Home;
+export default Profile;
