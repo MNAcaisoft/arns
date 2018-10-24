@@ -136,7 +136,7 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
+  footerDefaultBg: platform === "ios" ? "#F8F8F8" : "#0d4364",
   footerPaddingBottom: 0,
 
   // FooterTab
@@ -157,7 +157,7 @@ export default {
   searchBarInputHeight: platform === "ios" ? 30 : 50,
   toolbarBtnTextColor: platform === "ios" ? "#0d4364" : "#fff",
   iosStatusbar: "dark-content",
-  toolbarDefaultBorder: platform === "ios" ? "#a7a6ab" : "#3F51B5",
+  toolbarDefaultBorder: platform === "ios" ? "#0d4364" : "#0d4364",
   get statusBarColor() {
     return color(this.toolbarDefaultBg)
       .darken(0.2)

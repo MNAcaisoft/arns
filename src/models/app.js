@@ -1,4 +1,3 @@
-
 import SplashScreen from 'react-native-splash-screen';
 import Config from '../services/Config';
 

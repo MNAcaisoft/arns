@@ -136,7 +136,7 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: "#3F51B5",
+  footerDefaultBg: "#0d4364",
   footerPaddingBottom: 0,
 
   // FooterTab
@@ -149,7 +149,7 @@ export default {
 
   // Header
   toolbarBtnColor: "#fff",
-  toolbarDefaultBg: "#3F51B5",
+  toolbarDefaultBg: "#0d4364",
   toolbarHeight: 56,
   toolbarSearchIconSize: 23,
   toolbarInputColor: "#fff",

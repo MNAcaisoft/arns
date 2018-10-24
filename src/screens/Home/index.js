@@ -53,7 +53,7 @@ class Home extends React.Component<Props, State> {
         <Footer>
           <FooterTab>
             <Button full>
-              <Text>Acaisoft RNS</Text>
+              <Text style={{ color: '#fff' }}>Acaisoft RNS</Text>
             </Button>
           </FooterTab>
         </Footer>

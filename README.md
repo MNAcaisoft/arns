@@ -33,8 +33,8 @@ https://www.npmjs.com/package/react-native-rename
 13. Multiple routings(sidebar)
 14. Sidebar
 15. Logout
+16. Login Screen layout
 
 ## Stuff needed
 1. Top Bar component
 2. Toast notifications
-3. Login Screen layout

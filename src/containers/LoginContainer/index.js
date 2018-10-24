@@ -56,8 +56,7 @@ class LoginContainer extends React.Component<Props, State> {
   };
 
   render() {
-    const { isLoading, token } = this.props;
-    console.log(token);
+    const { isLoading } = this.props;
     const { values } = this.state;
     const form = (
       <Form ref={ref => (this.form = ref)} type={LoginForm} options={options} value={values} />
