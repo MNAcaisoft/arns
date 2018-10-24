@@ -3,6 +3,8 @@ import { Navigation } from 'react-native-navigation';
 import { Root, StyleProvider } from 'native-base';
 import LoginContainer from './../containers/LoginContainer';
 import HomeContainer from './../containers/HomeContainer';
+import SideBarContainer from './../containers/SideBarContainer';
+import ProfileContainer from './../containers/ProfileContainer';
 import getTheme from '../../native-base-theme/components';
 import variables from '../../native-base-theme/variables/material';
 import Config from './Config';
@@ -38,6 +40,18 @@ export function registerScreens(store, Provider) {
   Navigation.registerComponent(
     `${Config.urlPrefix}.Home`,
     () => themeWrap(HomeContainer),
+    store,
+    Provider
+  );
+  Navigation.registerComponent(
+    `${Config.urlPrefix}.SideBar`,
+    () => themeWrap(SideBarContainer),
+    store,
+    Provider
+  );
+  Navigation.registerComponent(
+    `${Config.urlPrefix}.Profile`,
+    () => themeWrap(ProfileContainer),
     store,
     Provider
   );

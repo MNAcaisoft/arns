@@ -1,14 +1,22 @@
-import Config from '../services/Config';
 import SplashScreen from 'react-native-splash-screen';
+import Config from '../services/Config';
 
 const app = {
   effects: dispatch => ({
     async init() {
       const token = dispatch.auth.getToken(`${Config.urlPrefix}:token`);
       if (token) {
-        dispatch.navigation.setRoot(`${Config.urlPrefix}.Home`);
+        dispatch.navigation.setRoot({
+          screen: `${Config.urlPrefix}.Home`,
+          title: 'Home',
+          sidebar: true,
+        });
       } else {
-        dispatch.navigation.setRoot(`${Config.urlPrefix}.Login`);
+        dispatch.navigation.setRoot({
+          screen: `${Config.urlPrefix}.Login`,
+          title: 'Login',
+          sidebar: false,
+        });
       }
       SplashScreen.hide();
     },

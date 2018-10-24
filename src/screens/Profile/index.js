@@ -13,30 +13,16 @@ import {
   Right,
   Title,
 } from 'native-base';
-import PropTypes from 'prop-types';
 
 // import styles from './styles';
 
-class Home extends React.Component<Props, State> {
-  static propTypes = {
-    navigator: PropTypes.object,
-  };
-
-  toggleMenu = () => {
-    const { navigator } = this.props;
-    navigator.toggleDrawer({
-      backButtonHidden: true,
-      side: 'left',
-      animated: true,
-    });
-  };
-
+class Profile extends React.Component<Props, State> {
   render() {
     return (
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={this.toggleMenu}>
+            <Button transparent>
               <Icon name="menu" />
             </Button>
           </Left>
@@ -47,7 +33,7 @@ class Home extends React.Component<Props, State> {
         </Header>
         <Content>
           <View>
-            <Text>Home 1</Text>
+            <Text>Profile</Text>
           </View>
         </Content>
         <Footer>
@@ -62,4 +48,4 @@ class Home extends React.Component<Props, State> {
   }
 }
 
-export default Home;
+export default Profile;
