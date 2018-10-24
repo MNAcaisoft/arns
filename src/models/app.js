@@ -5,7 +5,7 @@ import Config from '../services/Config';
 const app = {
   effects: dispatch => ({
     async init() {
-      const token = dispatch.auth.getToken(`${Config.urlPrefix}:token`);
+      const token = await dispatch.auth.getToken(`${Config.urlPrefix}:token`);
       if (token) {
         dispatch.navigation.setRoot({
           view: `${Config.urlPrefix}.Home`,

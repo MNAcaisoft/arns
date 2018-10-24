@@ -24,11 +24,12 @@ class SideBar extends React.Component<Props, State> {
     navigator: PropTypes.object,
   };
 
-  goTo(route, caption, logout?) {
+  async goTo(route, caption, logout?) {
+    const { onLogout, navigator } = this.props;
     if (logout) {
-      this.props.onLogout();
+      await onLogout();
     } else {
-      this.props.navigator.showModal({
+      navigator.showModal({
         screen: `${Config.urlPrefix}.${route}`,
         title: caption,
       });

@@ -30,11 +30,11 @@ https://www.npmjs.com/package/react-native-rename
 10. Axios/http service
 11. AsyncStorage
 12. User handling with API login
+13. Multiple routings(sidebar)
+14. Sidebar
+15. Logout
 
 ## Stuff needed
-1. Multiple routings(sidebar)
-2. Top Bar component
-3. Logout
-4. Sidebar
-5. Toast notifications
-6. Login Screen layout
+1. Top Bar component
+2. Toast notifications
+3. Login Screen layout

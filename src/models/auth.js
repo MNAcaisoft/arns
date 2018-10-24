@@ -26,15 +26,31 @@ const auth = {
     async login(data) {
       try {
         const response = await Http.post('/auth/login/', data);
-        this.storeToken(response.data.token);
+        await this.storeToken(response.data.token);
         setAuthHeader(response.data.token);
         this.setUser(response.data.user);
-        const token = await AsyncStorage.getItem(`@${Config.urlPrefix}:token`);
-        console.log('tokenisko', token);
-        dispatch.navigation.setRoot(`${Config.urlPrefix}.Home`);
+        dispatch.navigation.setRoot({
+          view: `${Config.urlPrefix}.Home`,
+          title: 'Home',
+          sidebar: true,
+        });
         return response;
       } catch (err) {
         throw err.response;
+      }
+    },
+    async logout() {
+      try {
+        await AsyncStorage.removeItem(`@${Config.urlPrefix}:token`);
+        this.setToken(null);
+        removeAuthHeader();
+        dispatch.navigation.setRoot({
+          view: `${Config.urlPrefix}.Login`,
+          title: 'Login',
+          sidebar: false,
+        });
+      } catch (error) {
+        console.log('Something go wrong!');
       }
     },
   }),
