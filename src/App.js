@@ -34,7 +34,7 @@ export default class App extends Component<Props> {
         },
         drawer: {
           left: {
-            screen: `${Config.urlPrefix}.Home`,
+            screen: `${Config.urlPrefix}.SideBar`,
           },
           disableOpenGesture: true,
         },
