@@ -24,9 +24,8 @@ class Profile extends React.Component<Props, State> {
 
   goBack = () => {
     const { navigator } = this.props;
-    navigator.popToRoot({
+    navigator.dismissAllModals({
       animated: true,
-      animationType: 'fade',
     });
   };
 

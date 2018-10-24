@@ -43,6 +43,7 @@
 		3FC56324D49A4362B89371D2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D21EAE25A7644A76B4E99408 /* Foundation.ttf */; };
 		55EC1070217F3C870033F72A /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EC106F217F3C4A0033F72A /* libReactNativeNavigation.a */; };
 		55EC1170217FA0BC0033F72A /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EC116F217FA0630033F72A /* libSplashScreen.a */; };
+		55EC11D5218053B20033F72A /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EC11AB218052D30033F72A /* libBVLinearGradient.a */; };
 		5B355EE6091D4804AB45EDB0 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8597590D5DE142D0BFFF35C8 /* MaterialCommunityIcons.ttf */; };
 		5FA5280581B646C3A951BE22 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7A40A7566C54605878EB8DF /* MaterialIcons.ttf */; };
 		61968C73AEF74B4E8F54D831 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA625B91B3814E93BE5037CD /* EvilIcons.ttf */; };
@@ -309,6 +310,20 @@
 			remoteGlobalIDString = 3D7682761D8E76B80014119E;
 			remoteInfo = SplashScreen;
 		};
+		55EC11AA218052D30033F72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55EC11A5218052D30033F72A /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = BVLinearGradient;
+		};
+		55EC11AC218052D30033F72A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55EC11A5218052D30033F72A /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64AA15081EF7F30100718508;
+			remoteInfo = "BVLinearGradient-tvOS";
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -375,6 +390,7 @@
 		5523FADA93FF463FB5E3FB15 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		55EC1045217F3C4A0033F72A /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		55EC1144217FA0630033F72A /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
+		55EC11A5218052D30033F72A /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		5C8532B7C83540F0B75DB0AF /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6CDF01C890974E62BE8F2312 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
@@ -404,6 +420,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55EC11D5218053B20033F72A /* libBVLinearGradient.a in Frameworks */,
 				55EC1170217FA0BC0033F72A /* libSplashScreen.a in Frameworks */,
 				55EC1070217F3C870033F72A /* libReactNativeNavigation.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -587,6 +604,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		55EC11A6218052D30033F72A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55EC11AB218052D30033F72A /* libBVLinearGradient.a */,
+				55EC11AD218052D30033F72A /* libBVLinearGradient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +655,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				55EC11A5218052D30033F72A /* BVLinearGradient.xcodeproj */,
 				55EC1144217FA0630033F72A /* SplashScreen.xcodeproj */,
 				55EC1045217F3C4A0033F72A /* ReactNativeNavigation.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -802,6 +829,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 55EC11A6218052D30033F72A /* Products */;
+					ProjectRef = 55EC11A5218052D30033F72A /* BVLinearGradient.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -1106,6 +1137,20 @@
 			fileType = archive.ar;
 			path = libSplashScreen.a;
 			remoteRef = 55EC116E217FA0630033F72A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		55EC11AB218052D30033F72A /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 55EC11AA218052D30033F72A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		55EC11AD218052D30033F72A /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 55EC11AC218052D30033F72A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
