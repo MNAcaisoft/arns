@@ -26,13 +26,12 @@ https://www.npmjs.com/package/react-native-rename
 6.  Native Base
 7.  tcomb form native
 8.  EsLint
-9. Axios/http service
+9.  Axios/http service
 10. AsyncStorage
 11. User handling with API login
-12. Multiple routings(sidebar)
+12. Multiple routings
 13. Sidebar
 14. Logout
-15. Login Screen layout
 
 ## Stuff needed
 1. Top Bar component
