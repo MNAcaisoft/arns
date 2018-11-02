@@ -38,6 +38,7 @@ class LoginContainer extends React.Component<Props, State> {
       email: null,
       password: null,
     };
+    props.initNav(props.navigator);
   }
 
   handleLogin = async () => {
@@ -72,6 +73,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   login: dispatch.auth.login,
+  initNav: dispatch.navigation.initNav,
 });
 
 export default connect(

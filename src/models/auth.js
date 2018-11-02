@@ -29,7 +29,7 @@ const auth = {
         await this.storeToken(response.data.token);
         setAuthHeader(response.data.token);
         this.setUser(response.data.user);
-        dispatch.navigation.setRoot({
+        dispatch.navigation.changeAppRoot({
           view: `${Config.urlPrefix}.Home`,
           title: 'Home',
           sidebar: true,
@@ -44,7 +44,7 @@ const auth = {
         await AsyncStorage.removeItem(`@${Config.urlPrefix}:token`);
         this.setToken(null);
         removeAuthHeader();
-        dispatch.navigation.setRoot({
+        dispatch.navigation.changeAppRoot({
           view: `${Config.urlPrefix}.Login`,
           title: 'Login',
           sidebar: false,

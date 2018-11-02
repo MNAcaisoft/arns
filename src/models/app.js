@@ -6,13 +6,13 @@ const app = {
     async init() {
       const token = await dispatch.auth.getToken(`${Config.urlPrefix}:token`);
       if (token) {
-        dispatch.navigation.setRoot({
+        dispatch.navigation.changeAppRoot({
           view: `${Config.urlPrefix}.Home`,
           title: 'Home',
           sidebar: true,
         });
       } else {
-        dispatch.navigation.setRoot({
+        dispatch.navigation.changeAppRoot({
           view: `${Config.urlPrefix}.Login`,
           title: 'Login',
           sidebar: false,

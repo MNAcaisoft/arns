@@ -21,15 +21,17 @@ const routes = [
 class SideBar extends React.Component<Props, State> {
   static propTypes = {
     onLogout: PropTypes.func,
+    onGoToScreen: PropTypes.func,
+    onToggleDrawer: PropTypes.func,
     navigator: PropTypes.object,
   };
 
   async goTo(route, caption, logout?) {
-    const { onLogout, navigator } = this.props;
+    const { onLogout, onGoToScreen } = this.props;
     if (logout) {
       await onLogout();
     } else {
-      navigator.showModal({
+      onGoToScreen({
         screen: `${Config.urlPrefix}.${route}`,
         title: caption,
       });
@@ -39,7 +41,9 @@ class SideBar extends React.Component<Props, State> {
   }
 
   toggle() {
-    this.props.navigator.toggleDrawer({
+    const { onToggleDrawer, navigator } = this.props;
+    console.log(navigator);
+    navigator.toggleDrawer({
       backButtonHidden: true,
       side: 'left',
       animated: true,

@@ -46,6 +46,12 @@ export default class App extends Component<Props> {
           title,
           navigatorStyle: {},
         },
+        drawer: {
+          left: {
+            screen: `${Config.urlPrefix}.SideBar`,
+          },
+          disableOpenGesture: true,
+        },
       });
     }
   }
