@@ -20,7 +20,6 @@ https://www.npmjs.com/package/react-native-rename
 ## Stuff Linked
 1.  React Native
 2.  React Native Navigator
-3.  Redux
 4.  Rematch/Loading
 5.  Native Splash Screen
 6.  Native Base
@@ -37,3 +36,7 @@ https://www.npmjs.com/package/react-native-rename
 1. Top Bar component
 2. Toast notifications
 3. Jest
+
+### check
+error boundaries(component did catch)
+how to fork so we can pull 
